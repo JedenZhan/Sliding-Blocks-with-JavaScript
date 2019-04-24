@@ -1,0 +1,59 @@
+.cont {
+	height: 500px;
+	width: 500px;
+  	position: relative;	
+	background-color: #ccc;
+	padding: 30px;
+	box-sizing: border-box;
+}
+.game {
+	width: 200px;
+	height: 400px;
+	background-color: #f2faff;
+	border-left: 1px solid #666;
+	border-bottom: 1px solid #666;
+	border-right: 1px solid #666;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.next {
+	width: 80px;
+	height: 80px;
+	background-color: #f2faff;
+	position: absolute;
+	top: 10px;
+	left: 250px;
+	border: 1px solid #777;
+}
+
+.info {
+	position: absolute;
+	top: 130px;
+	left: 250px;
+	color: #444;
+}
+
+.none, .current, .done {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	box-sizing: border-box;
+} 
+
+.none {
+	background-color: #f2faff;
+	box-sizing: border-box;
+	border: 1px solid #eee;
+
+}
+.current {
+	background-color: pink;
+	border: 1px dotted #f40;
+}
+
+.done {
+	background-color: gray;
+	border: 1px solid #666;
+}
