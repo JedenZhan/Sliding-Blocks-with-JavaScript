@@ -1,4 +1,4 @@
-let Square = function () {
+function Square () {
   this.data = [
     [0, 0, 2, 0],
     [0, 0, 2, 0],
@@ -27,6 +27,7 @@ let Square = function () {
     }
     return isValid(this.origin, test);
   }
+  
   Square.prototype.rotate = function (num) {
     if (!num) {
       num = 1;

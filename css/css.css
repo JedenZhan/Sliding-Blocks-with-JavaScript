@@ -5,6 +5,7 @@
 	background-color: #ccc;
 	padding: 30px;
 	box-sizing: border-box;
+	margin: auto;
 }
 .game {
 	width: 200px;
@@ -56,4 +57,8 @@
 .done {
 	background-color: gray;
 	border: 1px solid #666;
+}
+
+#start {
+	cursor: pointer;
 }
