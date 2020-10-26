@@ -1,5 +1,6 @@
 let score = 0;
-let Game = function () {
+
+function Game () {
 	// dom
 	// let不能重复定义
 	// 游戏矩阵
@@ -26,16 +27,15 @@ let Game = function () {
 		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	];
 	// 当前方块
-	var cur;
+	let cur;
 	// 下一个方块
-	var next;
+	let next;
 	// divs
 	let nextDivs = [];
 	let gameDivs = [];
 
-
 	// 初始化div
-	let initDiv = function (container, data, divs) {
+	function initDiv (container, data, divs) {
 		for (let i = 0; i < data.length; i++) {
 			let div = [];
 			for (let j = 0; j < data[0].length; j++) {
@@ -50,7 +50,7 @@ let Game = function () {
 		}
 	}
 	// 刷新页面
-	let refreshDiv = function (data, divs) {
+	function refreshDiv (data, divs) {
 		for (let i = 0; i < data.length; i++) {
 			for (let j = 0; j < data[0].length; j++) {
 				if (data[i][j] == 0) {
@@ -160,6 +160,7 @@ let Game = function () {
 			refreshDiv(gameData, gameDivs);
 		}
 	}
+
 	let init = function (doms) {
 		gameDiv = doms.gameDiv;
 		nextDiv = doms.nextDiv;
@@ -213,8 +214,8 @@ let Game = function () {
 						gameData[0][n] = 0
 					}, 1000)
 				}
-				i ++;
-				score ++;
+				i++;
+				score++;
 				document.getElementById('score').innerHTML = score;
 			}
 		}
@@ -222,10 +223,11 @@ let Game = function () {
 	// 游戏结束函数
 	let checkGameOver = function () {
 		let gameOver = false;
+
 		for (let i = 0; i < gameData[0].length; i ++) {
 			if (gameData[1][i] == 1) {
 				gameOver = true;
-				
+				break;
 			}
 		}
 		return gameOver;

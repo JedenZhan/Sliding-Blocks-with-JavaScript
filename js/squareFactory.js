@@ -234,8 +234,10 @@ Square7.prototype = Square.prototype;
 let SquareFactory = function () {
 
 }
+
 SquareFactory.prototype.make = function (index, dir) {
   let s;
+
   index += 1;
   switch (index) {
     case 1:
@@ -262,8 +264,10 @@ SquareFactory.prototype.make = function (index, dir) {
     default:
       break;
   }
+
   s.origin.x = 0;
   s.origin.y = 3;
   s.rotate(dir);
+  
   return s;
 }
